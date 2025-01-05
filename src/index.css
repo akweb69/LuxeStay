@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  max-width: 1590px;
+  margin: 0 auto;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+.active {
+  background-color: aliceblue;
+}
