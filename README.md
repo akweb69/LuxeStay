@@ -81,6 +81,19 @@ LuxeStay is a premium hotel booking platform that redefines luxury and comfort. 
 
 ---
 
+
+### How to Run the Project Locally
+
+To run the **Lingo Bingo** project on your local machine, follow these steps:
+
+1. **Clone the repository:**
+
+   Start by cloning the project repository to your local machine using Git. Open your terminal (or Git Bash) and run:
+
+   
+bash
+   git clone[ https://github.com/yourusername/lingo-bingo.git](https://github.com/akweb69/LuxeStay)
+
 ## Contributing:
 
 We welcome contributions! If you have ideas to improve LuxeStay, feel free to fork the repository and submit a pull request.
