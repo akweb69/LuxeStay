@@ -30,6 +30,8 @@ const Navbar = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
+
+
     }, []);
 
     return (
@@ -52,7 +54,9 @@ const Navbar = () => {
                                     <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/"}>Home</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/rooms"}>Rooms</NavLink>
+                                    {
+                                        user && user?.email ? <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/rooms"}>All Rooms</NavLink> : ""
+                                    }
                                 </li>
                                 <li>
                                     {
@@ -64,6 +68,9 @@ const Navbar = () => {
                                 </li>
                                 <li>
                                     <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/about"}>About</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/contact"}>Contact</NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -171,10 +178,14 @@ const Navbar = () => {
                                 <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/"}>Home</NavLink>
                             </li>
                             <li>
-                                <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/rooms"}>Rooms</NavLink>
+                                {
+                                    user && user?.email ? <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/rooms"}> All Rooms</NavLink> : ""
+                                }
                             </li>
                             <li>
-                                <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/my-bookings"}>My Bookings</NavLink>
+                                {
+                                    user && user?.email ? <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/my-bookings"}>My Bookings</NavLink> : ""
+                                }
                             </li>
                             <li>
                                 <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/gallery"}>Gallery</NavLink>
@@ -182,6 +193,10 @@ const Navbar = () => {
                             <li>
                                 <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/about"}>About</NavLink>
                             </li>
+                            <li>
+                                <NavLink className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/contact"}>Contact</NavLink>
+                            </li>
+
                             {
                                 user && user?.email ? <li onClick={hanldeLogout}>
                                     <Link className="px-3 py-2 rounded-md hover:bg-indigo-100" to={"/"}>Logout</Link>

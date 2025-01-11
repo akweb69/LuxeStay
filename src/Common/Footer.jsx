@@ -19,10 +19,10 @@ const Footer = () => {
                 <div>
                     <h2 className="text-xl font-semibold text-white mb-4">Quick Links</h2>
                     <ul className="space-y-2">
-                        <li><Link to="#" className="text-gray-400 hover:text-white">Home</Link></li>
-                        <li><Link to="#" className="text-gray-400 hover:text-white">About Us</Link></li>
-                        <li><Link to="#" className="text-gray-400 hover:text-white">Rooms</Link></li>
-                        <li><Link to="#" className="text-gray-400 hover:text-white">Contact</Link></li>
+                        <li><Link to="/" className="text-gray-400 hover:text-white">Home</Link></li>
+                        <li><Link to="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
+                        <li><Link to="/rooms" className="text-gray-400 hover:text-white">Rooms</Link></li>
+                        <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
                     </ul>
                 </div>
 
@@ -30,16 +30,16 @@ const Footer = () => {
                 <div>
                     <h2 className="text-xl font-semibold text-white mb-4">Follow Us</h2>
                     <div className="flex space-x-4">
-                        <Link to="#" className="text-gray-400 hover:text-blue-500">
+                        <Link to="https://www.facebook.com/profile.php?id=100012366829035" className="text-gray-400 hover:text-blue-500">
                             <FaFacebook size={24} />
                         </Link>
-                        <Link to="#" className="text-gray-400 hover:text-blue-400">
+                        <Link to="https://x.com/?lang=en" className="text-gray-400 hover:text-blue-400">
                             <FaTwitter size={24} />
                         </Link>
-                        <Link to="#" className="text-gray-400 hover:text-pink-500">
+                        <Link to="https://www.instagram.com/" className="text-gray-400 hover:text-pink-500">
                             <FaInstagram size={24} />
                         </Link>
-                        <Link to="#" className="text-gray-400 hover:text-blue-700">
+                        <Link to="https://www.linkedin.com/in/abukalam1/" className="text-gray-400 hover:text-blue-700">
                             <FaLinkedin size={24} />
                         </Link>
                     </div>

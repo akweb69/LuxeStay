@@ -10,6 +10,7 @@ import Error404page from "../Pages/Error404page";
 import Gallery from "../Pages/Gallery";
 import About from "../Components/About";
 import PrivateRout from "./PrivateRout";
+import ContactUs from "../Components/ContactUs";
 
 
 const router = createBrowserRouter([
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/rooms",
-                element: <Rooms></Rooms>
+                element: <PrivateRout><Rooms></Rooms></PrivateRout>
             },
             {
                 path: '/room/:id',
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             {
                 path: "/my-bookings",
                 element: <PrivateRout><MyBooking></MyBooking></PrivateRout>
+            },
+            {
+                path: "/contact",
+                element: <ContactUs></ContactUs>
             }
             ,
             {

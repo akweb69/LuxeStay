@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import HeadingTitle from '../Utils/HeadingTitle';
+import { useLocation } from 'react-router-dom';
 
 const ContactUs = () => {
+    const location = useLocation()
+    const [h, setH] = useState(false)
+    useEffect(() => {
+
+        if (location.pathname === "/contact") {
+            setH(true)
+        }
+    }, [])
 
     return (
-        <div className="w-full bg-gradient-to-t from-purple-200 to-indigo-300 text-gray-800">
+        <div className={`w-full bg-gradient-to-t from-purple-200 to-indigo-50 text-gray-800 ${h && "min-h-screen pb-20 "}`}>
             <HeadingTitle one={"Contact Us"} two={"We’re here to help – reach out and let’s connect!"}></HeadingTitle>
 
             <div className="w-11/12 mx-auto">
