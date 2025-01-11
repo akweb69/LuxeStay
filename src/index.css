@@ -15,7 +15,7 @@ body {
   background-color: aliceblue;
 }
 
-.play::before {
+.playBtn::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -27,7 +27,7 @@ body {
   animation: pulse 2s ease-in-out infinite;
 }
 
-.play::after {
+.playBtn::after {
   content: "";
   position: absolute;
   top: 0;

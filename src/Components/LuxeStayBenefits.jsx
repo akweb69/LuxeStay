@@ -1,35 +1,19 @@
 import { motion } from "framer-motion"; // For animation effects
 import { FaBed, FaConciergeBell, FaWifi, FaCalendarCheck, FaUmbrellaBeach, FaUtensils } from "react-icons/fa"; // For icons
+import HeadingTitle from "../Utils/HeadingTitle";
 
 const LuxeStayBenefits = () => {
     return (
-        <div className="py-20 bg-gradient-to-b from-indigo-950 via-blue-950 to-purple-950 text-white">
-            <div className="max-w-screen-xl mx-auto px-6 text-center">
-                {/* Section Title */}
-                <motion.h2
-                    className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 mb-4"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                >
-                    LuxeStay Benefits
-                </motion.h2>
+        <div className=" bg-gradient-to-b pb-20 from-indigo-950 via-blue-950 to-purple-950 text-white">
+            <HeadingTitle one={"LuxeStay Benefits"} two={"Discover the exclusive benefits of staying at LuxeStay. From premium amenities to exceptional service, we ensure that every guest enjoys a luxurious and unforgettable experience."}></HeadingTitle>
+            <div className="w-11/12 mx-auto text-center">
 
-                {/* Subtitle */}
-                <motion.p
-                    className="text-sm md:w-1/2 mx-auto font-medium text-gray-300 mb-12"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                >
-                    Discover the exclusive benefits of staying at LuxeStay. From premium amenities to exceptional service, we ensure that every guest enjoys a luxurious and unforgettable experience.
-                </motion.p>
 
                 {/* Benefits List */}
-                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 justify-center items-center">
+                <div className="grid sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 justify-center items-center">
                     {/* Benefit 1 */}
                     <motion.div
-                        className="p-6 border border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
+                        className="p-6 border h-full border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
@@ -43,7 +27,7 @@ const LuxeStayBenefits = () => {
 
                     {/* Benefit 2 */}
                     <motion.div
-                        className="p-6 border border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
+                        className="p-6 border h-full border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
@@ -57,7 +41,7 @@ const LuxeStayBenefits = () => {
 
                     {/* Benefit 3 */}
                     <motion.div
-                        className="p-6 border border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
+                        className="p-6 border h-full border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
@@ -71,7 +55,7 @@ const LuxeStayBenefits = () => {
 
                     {/* Benefit 4 */}
                     <motion.div
-                        className="p-6 border border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
+                        className="p-6 h-full border border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.8 }}
@@ -85,7 +69,7 @@ const LuxeStayBenefits = () => {
 
                     {/* Benefit 5 */}
                     <motion.div
-                        className="p-6 border border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
+                        className="p-6 border h-full border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 1 }}
@@ -99,7 +83,7 @@ const LuxeStayBenefits = () => {
 
                     {/* Benefit 6 */}
                     <motion.div
-                        className="p-6 border border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
+                        className="p-6 border h-full border-white/30 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 flex flex-col items-center"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 1.2 }}

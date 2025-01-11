@@ -109,7 +109,7 @@ const GalleryPage = () => {
     };
 
     return (
-        <div className="p-6">
+        <div className="w-11/12 mx-auto py-14">
             <ScrollToTop></ScrollToTop>
             <Helmet>
                 <title> Gallery | LuxeStay </title>

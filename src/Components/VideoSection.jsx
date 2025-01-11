@@ -30,7 +30,7 @@ const VideoSection = () => {
                     <img src="https://i.ibb.co/qsjzbJ3/2149714407.jpg" className="w-full rounded-xl max-h-[500px] object-cover p-1 border  " alt="" />
                     <div
                         onClick={() => setM(true)}
-                        className="absolute play cursor-pointer top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        className="absolute playBtn cursor-pointer top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <p className="bg-red-500 p-3 rounded-full flex justify-center items-center">
                             <MdOutlinePlayArrow className="text-4xl text-white"></MdOutlinePlayArrow>
                         </p>

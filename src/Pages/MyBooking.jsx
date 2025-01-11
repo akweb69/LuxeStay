@@ -249,17 +249,7 @@ const MyBooking = () => {
             <ScrollToTop />
             {
                 loading ? <div className="flex flex-col items-center justify-center h-screen bg-white">
-                    {/* Spinner */}
-                    <div className="relative w-20 h-20">
-                        {/* Outer ring */}
-                        <div className="absolute inset-0 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-                        {/* Inner glowing dot */}
-                        <div className="absolute w-6 h-6 bg-blue-500 rounded-full top-7 left-7 animate-ping"></div>
-                    </div>
-                    {/* Loading Text */}
-                    <p className="mt-6 text-xl font-semibold text-gray-800 tracking-widest animate-pulse">
-                        Loading...
-                    </p>
+                    Please Wait...
                 </div> :
                     <div className="w-11/12 mx-auto py-10">
                         <div className="flex justify-between items-center">

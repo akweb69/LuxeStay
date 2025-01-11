@@ -25,7 +25,7 @@ const Faq = () => {
     ];
 
     return (
-        <div className="bg-gradient-to-b from-purple-200 to-indigo-300 ">
+        <div className="bg-gradient-to-b pb-20 from-purple-200 to-indigo-300 ">
             <HeadingTitle one={"Frequently Asked Questions"} two={"Find answers to your questions – all in one place."}></HeadingTitle>
             <div className="w-11/12 mx-auto">
 
