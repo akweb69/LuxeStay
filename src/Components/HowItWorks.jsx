@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaSearch, FaCalendarCheck, FaHotel } from "react-icons/fa";
+import HeadingTitle from "../Utils/HeadingTitle";
 
 const HowItWorks = () => {
     const steps = [
@@ -21,25 +22,20 @@ const HowItWorks = () => {
     ];
 
     return (
-        <div className="w-full py-16 bg-gradient-to-b from-indigo-300 to-gray-200">
+        <div className="w-full bg-gradient-to-b from-indigo-300 to-gray-200">
             <div className="w-11/12 mx-auto">
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: -60 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
-                    className="text-center mb-12"
+                    className="text-center"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r w-fit mx-auto from-pink-500 to-orange-500 text-transparent bg-clip-text">
-                        How It Works
-                    </h2>
-                    <p className="text-gray-600 mt-4">
-                        LuxeStay makes it easy to find and book your dream hotel.
-                    </p>
+                    <HeadingTitle one={" How It Works"} two={"LuxeStay makes it easy to find and book your dream hotel."}></HeadingTitle>
                 </motion.div>
 
                 {/* Steps Section */}
-                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-4 md:px-0">
+                <div className=" grid grid-cols-1 md:grid-cols-3 gap-10 px-4 md:px-0">
                     {steps.map((step, index) => (
                         <motion.div
                             key={index}
