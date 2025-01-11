@@ -2,25 +2,17 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import { FaRocket, FaUsers, FaCheckCircle, FaHeart, FaLightbulb } from "react-icons/fa";
 import ScrollToTop from "../Utils/ScrollToTop";
+import HeadingTitle from "../Utils/HeadingTitle";
 
 const About = () => {
     return (
-        <div className="w-full min-h-[50vh] py-10 md:py-16 bg-gradient-to-b from-purple-200 to-indigo-300 text-gray-800">
+        <div className="w-full  bg-gradient-to-b from-purple-200 to-indigo-300 text-gray-800">
             <ScrollToTop></ScrollToTop>
-
+            <HeadingTitle one={"About Us_"} two={"Discover our story, values, and commitment to delivering excellence"}></HeadingTitle>
             <div className="w-11/12 mx-auto">
-                {/* Title Section */}
-                <motion.h2
-                    className="pb-10 text-center text-3xl md:text-5xl font-bold bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    About Us_
-                </motion.h2>
 
                 {/* Timeline Section */}
-                <div className="relative mt-10">
+                <div className="relative ">
                     {/* Central Line */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-indigo-500 to-purple-400 h-full"></div>
 
@@ -106,7 +98,7 @@ const About = () => {
 
                     {/* Step 5 (Left Side) */}
                     <motion.div
-                        className="flex items-center mb-14 relative"
+                        className="flex items-center pb-14 relative"
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         // viewport={{ once: true }}
