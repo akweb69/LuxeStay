@@ -3,6 +3,7 @@ import { FaBed, FaWifi, FaUtensils, FaRegMoneyBillAlt } from "react-icons/fa";
 import { MdOutlineBathtub, MdOutlineSmokingRooms } from "react-icons/md";
 import { motion } from "framer-motion";
 import axios from "axios";
+import HeadingTitle from "../Utils/HeadingTitle";
 
 const SpecialOffers = () => {
     const [rooms, setRooms] = useState([]);
@@ -18,19 +19,11 @@ const SpecialOffers = () => {
     }, []);
 
     return (
-        <section className="w-full py-20 bg-gradient-to-t from-indigo-200 to-indigo-100">
-            <div className="max-w-7xl mx-auto px-5">
+        <section className="w-full bg-gradient-to-t from-indigo-200 to-indigo-100">
+            <div className="w-11/12  mx-auto">
                 {/* Title Section */}
-                <div className="text-center mb-12">
-                    <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                        Special Offers & Promotions
-                    </h1>
-                    <p className="text-gray-600 mt-4 md:w-1/2 mx-auto ">
-                        Unlock the best deals on top-rated rooms! Book now and experience
-                        luxury like never before with unbeatable offers crafted just for
-                        you.
-                    </p>
-                </div>
+                <HeadingTitle one={"Special Offers & Promotions"} two={"Unlock the best deals on top-rated rooms! Book now and experie luxury like never before with unbeatable offers crafted just for you."}></HeadingTitle>
+
 
                 {/* Offer Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
