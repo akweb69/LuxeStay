@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { FaThumbsUp, FaShieldAlt, FaWallet, FaStar } from "react-icons/fa";
+import HeadingTitle from "../Utils/HeadingTitle";
 
 const Why = () => {
     const features = [
@@ -27,26 +28,14 @@ const Why = () => {
     ];
 
     return (
-        <div className="w-full py-16 bg-gradient-to-b from-gray-200 to-purple-200">
+        <div className="w-full bg-gradient-to-b from-gray-200 to-purple-200">
+
+            <HeadingTitle one={"Why Choose Us"} two={"Discover the LuxeStay advantage with exclusive benefits and top-notch service."}></HeadingTitle>
             <div className="w-11/12 mx-auto">
-                {/* Section Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: -50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-12"
-                >
-                    <h2 className="text-3xl py-2 md:text-5xl w-fit mx-auto font-bold bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text">
-                        Why Choose Us
-                    </h2>
-                    <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-                        Discover the LuxeStay advantage with exclusive benefits and top-notch service.
-                    </p>
-                </motion.div>
+
 
                 {/* Features Section */}
-                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:px-0">
+                <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:px-0">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
