@@ -298,7 +298,7 @@ const RoomDetails = () => {
                                                 <div className="border p-4 items-center  rounded-lg border-indigo-900 flex  gap-3 mx-4">
                                                     <div className="w-full grid grid-cols-6 items-center gap-4">
                                                         <div className="col-span-1 flex justify-center items-center">
-                                                            <img referrerPolicy="no-referrer" className="rounded-full" src={r?.user.photoURL} alt="helo" />
+                                                            <img referrerPolicy="no-referrer" className="rounded-full h-14 w-14" src={r?.user.photoURL} alt="helo" />
                                                         </div>
                                                         <div className="col-span-5">
                                                             <h1 className="font-semibold">{r?.user.displayName}</h1>
@@ -322,7 +322,7 @@ const RoomDetails = () => {
                                                 <div className="border p-4 items-center  rounded-lg border-indigo-900 flex  gap-3 mx-4">
                                                     <div className="w-full grid grid-cols-6 items-center gap-4">
                                                         <div className="col-span-1 flex justify-center items-center">
-                                                            <img referrerPolicy="no-referrer" className="rounded-full" src={r?.user.photoURL} alt="helo" />
+                                                            <img referrerPolicy="no-referrer" className="rounded-full h-14 w-14" src={r?.user.photoURL} alt="helo" />
                                                         </div>
                                                         <div className="col-span-5">
                                                             <h1 className="font-semibold">{r?.user.displayName}</h1>
@@ -346,7 +346,7 @@ const RoomDetails = () => {
                                                 <div className="border p-4 items-center  rounded-lg border-indigo-900 flex  gap-3 mx-4">
                                                     <div className="w-full grid grid-cols-6 items-center gap-4">
                                                         <div className="col-span-1 flex justify-center items-center">
-                                                            <img referrerPolicy="no-referrer" className="rounded-full" src={r?.user.photoURL} alt="helo" />
+                                                            <img referrerPolicy="no-referrer" className="rounded-full h-14 w-14" src={r?.user.photoURL} alt="helo" />
                                                         </div>
                                                         <div className="col-span-5">
                                                             <h1 className="font-semibold">{r?.user.displayName}</h1>
