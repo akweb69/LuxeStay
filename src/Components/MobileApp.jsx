@@ -2,9 +2,11 @@ import mm from "../assets/Logo/app.png"
 import { FcOk } from "react-icons/fc";
 import qr from "../assets/Logo/QR_code_for_mobile_English_Wikipedia.svg"
 import gtt from "../assets/Logo/gggg-removebg-preview.png"
+import HeadingTitle from "../Utils/HeadingTitle";
 const MobileApp = () => {
     return (
-        <div className="w-full bg-gradient-to-t to-gray-200 from-gray-200 via-orange-200 min-h-screen flex items-center justify-center py-10 md:py-14">
+        <div className="w-full bg-gradient-to-t to-gray-200 from-gray-200 via-orange-200 flex items-center justify-center flex-col">
+            <HeadingTitle one={"Mobile App"} two={"Stay connected on the go – luxury and convenience right at your fingertips"}></HeadingTitle>
             <div className="w-11/12 mx-auto lg:grid flex flex-col-reverse lg:grid-cols-2 items-center justify-center lg:gap-10" >
                 <div className="flex justify-center  w-full py-5  bg-bbb bg-cover bg-center bg-no-repeat bg-[rgba(0,0,0,0.4)] bg-blend-overlay rounded-xl ">
                     <img className="max-h-[650px] w-1/2 " src={mm} alt="" />
