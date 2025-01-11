@@ -1,21 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import HeadingTitle from '../Utils/HeadingTitle';
 
 const ContactUs = () => {
 
     return (
-        <div className="w-full py-10 md:py-16 bg-gradient-to-t from-purple-200 to-indigo-300 text-gray-800">
+        <div className="w-full bg-gradient-to-t from-purple-200 to-indigo-300 text-gray-800">
+            <HeadingTitle one={"Contact Us"} two={"We’re here to help – reach out and let’s connect!"}></HeadingTitle>
+
             <div className="w-11/12 mx-auto">
-                {/* Title Section */}
-                <motion.h2
-                    className="pb-10 md:pb-20 text-center text-3xl md:text-5xl font-bold bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    Contact Us
-                </motion.h2>
 
                 {/* Contact Information and Form Section */}
                 <div className="grid grid-cols-1 space-y-5 md:space-y-0 md:grid-cols-2 items-center gap-8 ">
