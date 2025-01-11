@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { FaPlay } from "react-icons/fa";
-import thumb from "../assets/Backgrounds/vvv.jpg"
+import { MdOutlinePlayArrow } from "react-icons/md";
 import { GiCrossedBones } from "react-icons/gi";
+import HeadingTitle from "../Utils/HeadingTitle";
 
 const VideoSection = () => {
     const [m, setM] = useState(false)
@@ -24,52 +23,17 @@ const VideoSection = () => {
                     </div>
                 </div>
             }
-            <div className="w-full  flex justify-center items-center mx-auto px-6 py-12">
-                <div className="md:grid mb-4 md:grid-cols-5 gap-8 items-center">
-                    {/* Left Side: Title and Details */}
-                    <div className="md:col-span-2 w-full   pb-5">
-                        <h2 className="text-3xl  md:text-6xl font-extrabold font-font1 mb-4 bg-gradient-to-tr to-orange-500 from-pink-500 via-indigo-500 text-transparent bg-clip-text text-center md:text-start">
-                            Discover LuxeStay
-                        </h2>
-                        <p className="w-full font-semibold font-font1 bg-gradient-to-tr to-orange-500 from-pink-500 via-indigo-500 text-transparent bg-clip-text text-xs md:text-sm text-justify">
-                            LuxeStay offers a luxurious hotel experience designed to provide unmatched comfort and style for its guests. Every detail, from the ambiance to the amenities, is crafted to deliver a sense of elegance and relaxation. The hotel prioritizes guest satisfaction by redefining hospitality standards with personalized services and top-tier facilities. A video showcases the essence of this luxurious experience, inviting viewers to immerse themselves in the world of LuxeStay. Whether you're traveling for leisure or business, LuxeStay promises a stay that combines sophistication, comfort, and unforgettable memories.
+            <div className="w-11/12 mx-auto">
+                <HeadingTitle one={" Discover LuxeStay"} two={"Experience the ultimate comfort and luxury at your fingertips – your dream stay awaits!"}></HeadingTitle>
+                {/* content section start here  */}
+                <div className="w-full relative">
+                    <img src="https://i.ibb.co/qsjzbJ3/2149714407.jpg" className="w-full rounded-xl max-h-[500px] object-cover p-1 border  " alt="" />
+                    <div
+                        onClick={() => setM(true)}
+                        className="absolute play cursor-pointer top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <p className="bg-red-500 p-3 rounded-full flex justify-center items-center">
+                            <MdOutlinePlayArrow className="text-4xl text-white"></MdOutlinePlayArrow>
                         </p>
-                    </div>
-
-                    {/* Right Side: Video Thumbnail */}
-                    <div className="relative col-span-3">
-                        {/* Thumbnail Image */}
-                        <img
-                            src={thumb}
-                            alt="Video Thumbnail"
-                            className="rounded-lg shadow-lg w-full  "
-                        />
-
-                        {/* Ripple Effect */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            {[...Array(3)].map((_, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="absolute w-10 h-10 rounded-full border  border-pink-700"
-                                    initial={{ scale: 1, opacity: 0.7 }}
-                                    animate={{ scale: 3, opacity: 0 }}
-                                    transition={{
-                                        duration: 2.5,
-                                        repeat: Infinity,
-                                        repeatType: "loop",
-                                        delay: index * 0.6,
-                                        ease: "linear",
-                                    }}
-                                ></motion.div>
-                            ))}
-
-                            {/* Play Icon */}
-                            <div
-                                onClick={() => setM(true)}
-                                className="bg-red-600 flex items-center justify-center p-4 rounded-full z-10 cursor-pointer">
-                                <FaPlay className="text-indigo-500 text-3xl group-hover:scale-110 transition-transform" />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -14,3 +14,37 @@ body {
 .active {
   background-color: aliceblue;
 }
+
+.play::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: aquamarine;
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.play::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(244, 102, 71);
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse 3s 1s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
