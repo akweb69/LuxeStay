@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaQuestionCircle } from "react-icons/fa";
 import img from "../assets/Images/Questions-pana.png";
+import HeadingTitle from "../Utils/HeadingTitle";
 
 const Faq = () => {
     const faqs = [
@@ -24,18 +25,10 @@ const Faq = () => {
     ];
 
     return (
-        <div className="bg-gradient-to-b from-purple-200 to-indigo-300 py-16">
-            <div className="max-w-7xl mx-auto px-4">
-                <motion.h2
-                    initial={{ y: -50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
-                >
-                    <span className="bg-gradient-to-r from-orange-400 to-pink-500 text-transparent bg-clip-text">
-                        Frequently Asked Questions
-                    </span>
-                </motion.h2>
+        <div className="bg-gradient-to-b from-purple-200 to-indigo-300 ">
+            <HeadingTitle one={"Frequently Asked Questions"} two={"Find answers to your questions – all in one place."}></HeadingTitle>
+            <div className="w-11/12 mx-auto">
+
 
                 <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Side Image */}
