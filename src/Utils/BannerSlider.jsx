@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const BannerSlider = ({ data }) => {
     const { title, subTitle } = data;
     return (
-        <div className={`w-full h-[50vh] md:min-h-screen flex justify-center items-center bg-transparent`}>
+        <div className={`w-full h-[66vh] flex justify-center items-center bg-transparent`}>
             <div className="md:p-20 p-4">
                 {/* Title Section */}
                 <div className="md:max-w-[75%] mx-auto ">

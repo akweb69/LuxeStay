@@ -6,7 +6,7 @@ const FeatureCard = ({ r }) => {
     const { _id, name, images, category, room_type, availability, description, price, rating, reviews } = r;
 
     return (
-        <div className="border border-indigo-200 rounded-lg hover:shadow-md  h-full flex flex-col">
+        <div className=" bg-white rounded-lg hover:shadow-md  h-full flex flex-col">
             <div className="flex flex-col h-full">
                 <div className="h-[220px] md:h-[250px]">
                     <img className="w-full h-full object-cover rounded-md" src={images.img_1} alt={name} />

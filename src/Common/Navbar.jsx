@@ -6,7 +6,6 @@ import { motion } from "motion/react"
 import { Tooltip } from "react-tooltip";
 import { FaUserCircle } from "react-icons/fa";
 import { MdOutlinePlaylistAdd } from "react-icons/md";
-import { IoReceipt } from "react-icons/io5";
 import { GrUserAdmin } from "react-icons/gr";
 import { FiLogOut } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -35,10 +34,10 @@ const Navbar = () => {
 
     return (
         <motion.div
-            className={`${navBg ? "bg-indigo-100 fixed w-full top-0 z-10" : "bg-indigo-400"} transition-all duration-300`}
+            className={`${navBg ? "bg-indigo-50 fixed w-full top-0 z-10" : "bg-slate-100"} transition-all duration-300 `}
         >
             <div className="w-full h-16 ">
-                <div className="w-11/12 h-full mx-auto flex justify-between items-center">
+                <div className="w-11/12  h-full mx-auto flex justify-between items-center">
                     {/* Logo */}
                     <Link className="flex items-end text-lg sm:text-2xl md:text-4xl font-bold font-font1">
                         <RiBuilding2Line className="text-amber-400 text-3xl md:text-5xl" />
@@ -100,12 +99,6 @@ const Navbar = () => {
                                                                 <MdOutlinePlaylistAdd size={18} />
                                                                 <span>My Bookings</span>
                                                             </Link>
-                                                            {/* <Link to={"/my-reviews"}
-                                                                className="flex items-center space-x-2 hover:text-green-600 hover:bg-gray-100 px-3 py-2 rounded-lg transition"
-                                                            >
-                                                                <IoReceipt size={18} />
-                                                                <span>My Reviews</span>
-                                                            </Link> */}
 
                                                             {
                                                                 user?.email === "akwebdev69@gmail.com" ? <Link to={"/admin-pannel"}
