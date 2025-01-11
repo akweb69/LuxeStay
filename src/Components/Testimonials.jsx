@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
+import HeadingTitle from "../Utils/HeadingTitle";
+import Rating from "react-rating";
 import { FaStar } from "react-icons/fa";
-import ReactRating from "react-rating";
 
 const Testimonials = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
     const [data, setData] = useState([]);
 
     // Fetch testimonials from API
@@ -14,97 +15,76 @@ const Testimonials = () => {
             .then((res) => {
                 const allReviews = res.data;
                 setData(allReviews);
+                console.log(allReviews)
 
             })
             .catch((err) => console.error(err));
     }, []);
 
-    // Handle Next
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
-    };
+    var settings = {
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
 
-    // Handle Previous
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
+        ]
     };
 
     return (
-        <div className="w-full py-20 bg-gradient-to-t from-indigo-300 to-indigo-200">
+        <div className="w-full bg-gradient-to-t from-indigo-300 to-indigo-200">
             <div className="w-11/12 mx-auto">
                 {/* Title */}
-                <h1 className="text-2xl md:text-4xl font-bold font-font1 text-center">
-                    Voices of Trust
-                </h1>
-                <p className="text-xs md:text-sm text-center md:w-1/2 mx-auto pt-4 text-gray-500 pb-10">
-                    "Discover what our guests have to say about their experiences. Their words reflect the trust and satisfaction we've earned. Join them in experiencing comfort and excellence."
-                </p>
+                <HeadingTitle one={"Voices of Trust"} two={"Discover what our guests have to say about their experiences. Their words reflect the trust and satisfaction we've earned. Join them in experiencing comfort and excellence."}></HeadingTitle>
 
                 {/* Testimonials Section */}
-                <div className="flex flex-col items-center lg:flex-row lg:items-center lg:justify-center gap-6">
-                    {/* Left Button for large screens */}
-                    <button
-                        onClick={handlePrev}
-                        className="hidden lg:block bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-600 transition"
-                    >
-                        Prev
-                    </button>
 
-                    {/* Single Card */}
-                    <div className="w-full md:w-2/3 lg:w-2/3 bg-gradient-to-tr to-pink-400 from-indigo-600 p-6 rounded-lg shadow-lg text-center mx-4">
-                        {data.length > 0 && (
-                            <>
-                                <div className="flex flex-col items-center">
-                                    <img
-                                        referrerPolicy="no-referrer"
-                                        src={data[currentIndex]?.user?.photoURL}
-                                        alt="User"
-                                        className="w-16 h-16 rounded-full mb-4"
-                                    />
-                                    <h4 className="font-semibold text-lg text-white">
-                                        {data[currentIndex]?.user?.displayName}
-                                    </h4>
+                <div className="slider-container mx-6">
+                    <Slider {...settings}>
+                        {
+                            data.map((item, idx) =>
+                                <div key={idx} className="">
+                                    <div className="mx-2 bg-transparent border border-indigo-700 p-4 flex justify-center items-center flex-col rounded-xl h-[300px] overflow-auto">
+                                        <img src={item?.user?.photoURL} referrerPolicy="no-referrer" alt="" className="w-14 h-14 rounded-full border p-1" />
+                                        <div className="flex-1 text-center">
+                                            <h1 className="text-lg md:text-xl font-semibold font-font1 text-gray-700">{item?.user?.displayName}</h1>
+                                            <p className="text-center text-sm">{item?.comment}</p>
+                                            <Rating className="py-2"
+                                                initialRating={item?.rating || 0}
+                                                emptySymbol={<FaStar className="text-gray-300 text-2xl" />}
+                                                fullSymbol={<FaStar className="text-yellow-500 text-2xl" />}
+                                                readonly
+                                            />
+                                            <p className="">{item?.reviewTime}</p>
+                                        </div>
+
+                                    </div>
                                 </div>
-                                <ReactRating
-                                    emptySymbol={<FaStar className="text-gray-400" />}
-                                    fullSymbol={<FaStar className="text-yellow-500" />}
-                                    initialRating={data[currentIndex].rating}
-                                    readonly
-                                />
-                                <p className="text-gray-300 my-4 italic">
-                                    "{data[currentIndex]?.comment}"
-                                </p>
-                                <span className="text-sm text-gray-100">
-                                    {new Date(data[currentIndex]?.reviewTime).toLocaleDateString()}
-                                </span>
-                            </>
-                        )}
-                    </div>
-
-                    {/* Right Button for large screens */}
-                    <button
-                        onClick={handleNext}
-                        className="hidden lg:block bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-600 transition"
-                    >
-                        Next
-                    </button>
+                            )
+                        }
+                    </Slider>
                 </div>
 
-                {/* Buttons for small screens */}
-                <div className="flex lg:hidden justify-center gap-4 mt-6">
-                    <button
-                        onClick={handlePrev}
-                        className="bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-600 transition"
-                    >
-                        Prev
-                    </button>
-                    <button
-                        onClick={handleNext}
-                        className="bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-600 transition"
-                    >
-                        Next
-                    </button>
-                </div>
             </div>
         </div>
     );
