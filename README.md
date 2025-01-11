@@ -61,6 +61,39 @@ LuxeStay is a premium hotel booking platform that redefines luxury and comfort. 
 
 ---
 
+### Dependencies Used
+
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for fast and easy UI development.
+- **Chart.js**: JavaScript library for creating animated and interactive charts.
+- **Framer Motion**: Library for animations in React applications.
+- **React Router**: For seamless navigation between pages.
+- **Axios**: To handle HTTP requests (if applicable for future features).
+
+---
+
+### DevDependencies Used
+
+- **Tailwind CSS**: To help with utility-first design.
+- **PostCSS**: Used for processing Tailwind CSS.
+- **Autoprefixer**: Ensures compatibility with multiple browsers by adding necessary vendor prefixes to CSS.
+- **react-scripts**: Scripts for development, building, and testing the app.
+
+---
+
+
+### How to Run the Project Locally
+
+To run the **Lingo Bingo** project on your local machine, follow these steps:
+
+1. **Clone the repository:**
+
+   Start by cloning the project repository to your local machine using Git. Open your terminal (or Git Bash) and run:
+
+   
+bash
+   git clone[ https://github.com/yourusername/lingo-bingo.git](https://github.com/akweb69/LuxeStay)
+
 ## Contributing:
 
 We welcome contributions! If you have ideas to improve LuxeStay, feel free to fork the repository and submit a pull request.
