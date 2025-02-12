@@ -11,7 +11,7 @@ const NewsLetter = () => {
     };
 
     return (
-        <div className="bg-gradient-to-t from-gray-900  to-indigo-950 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-t from-gray-900  to-purple-950 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto text-center">
                 <motion.h2
                     className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 sm:text-4xl"

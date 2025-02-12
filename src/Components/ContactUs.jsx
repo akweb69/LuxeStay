@@ -53,7 +53,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div className={`w-full bg-gradient-to-t from-purple-200 via-indigo-100 to-pink-50 text-gray-800 ${h && "min-h-screen pb-20"}`}>
+        <div className={`w-full bg-gradient-to-t from-purple-200 via-indigo-100 to-indigo-300 text-gray-800 ${h && "min-h-screen pb-20"}`}>
             <HeadingTitle one={"Contact Us"} two={"We’re here to help – reach out and let’s connect!"} />
 
             <div className="w-11/12 mx-auto py-12">

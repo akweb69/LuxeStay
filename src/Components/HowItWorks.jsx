@@ -22,7 +22,7 @@ const HowItWorks = () => {
     ];
 
     return (
-        <div className="w-full bg-gradient-to-b from-indigo-300 to-gray-200">
+        <div className="w-full bg-gradient-to-b from-indigo-400 to-gray-200">
             <div className="w-11/12 mx-auto">
                 {/* Section Header */}
                 <motion.div
