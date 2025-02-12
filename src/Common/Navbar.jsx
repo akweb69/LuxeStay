@@ -39,7 +39,7 @@ const Navbar = () => {
             className={`${navBg ? "bg-indigo-50 fixed w-full top-0 z-10" : "bg-slate-100"} transition-all duration-300 `}
         >
             <div className="w-full h-16 ">
-                <div className="w-11/12  h-full mx-auto flex justify-between items-center">
+                <div className="w-11/12   h-full mx-auto flex justify-between items-center">
                     {/* Logo */}
                     <Link className="flex items-end text-lg sm:text-2xl md:text-4xl font-bold font-font1">
                         <RiBuilding2Line className="text-amber-400 text-3xl md:text-5xl" />
@@ -126,7 +126,6 @@ const Navbar = () => {
                                                             </Link>
                                                         </Tooltip>
                                                     </div>
-
                                                 </div>
 
                                             </div>
