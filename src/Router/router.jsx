@@ -11,6 +11,7 @@ import Gallery from "../Pages/Gallery";
 import About from "../Components/About";
 import PrivateRout from "./PrivateRout";
 import ContactUs from "../Components/ContactUs";
+import My_Profile from "../Pages/My_Profile";
 
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <HomePage></HomePage>
+            },
+            {
+                path: "/my_profile",
+                element: <My_Profile></My_Profile>
             },
             {
                 path: "/login",

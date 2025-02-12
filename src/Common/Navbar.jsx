@@ -96,7 +96,7 @@ const Navbar = () => {
                                                                 <span className="w-full mx-auto">{user?.displayName}</span>
                                                             </button>
 
-                                                            <Link to={"/"}
+                                                            <Link to={"/my_profile"}
                                                                 className="flex items-center space-x-2 hover:text-green-600 hover:bg-gray-100 px-3 py-2 rounded-lg transition"
                                                             >
                                                                 <FaUserCircle size={18} />
