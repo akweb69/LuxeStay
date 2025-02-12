@@ -206,7 +206,7 @@ const RoomDetails = () => {
     }, [])
 
     return (
-        <div className="min-h-[90vh]">
+        <div className="min-h-[90vh] relative">
             <ScrollToTop />
             {loading ? (
                 <Loading />

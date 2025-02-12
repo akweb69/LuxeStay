@@ -26,8 +26,8 @@ const SpecialOffers = () => {
 
 
                 {/* Offer Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {rooms?.slice(2, 5).map((room, index) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    {rooms?.slice(1, 5).map((room, index) => (
                         <motion.div
                             key={index}
                             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 relative"
@@ -47,64 +47,71 @@ const SpecialOffers = () => {
                             />
 
                             {/* Content */}
-                            <div className="p-5 relative">
-                                {/* Title & Price */}
-                                <h2 className="text-xl font-semibold">{room.name}</h2>
-                                <p className="text-gray-200 text-sm mt-1">
-                                    {room.description.substring(0, 80)}...
-                                </p>
+                            <div className="p-5 relative  ">
+                                <div className="">
 
-                                {/* Price with discount */}
-                                <div className="flex items-center mt-2">
-                                    <span className="text-lg font-bold text-gray-200">
-                                        ${room.price}/night
-                                    </span>
-                                    <span className="ml-2 text-lg font-semibold text-gray-400 line-through">
-                                        $35000
-                                    </span>
-                                    <span className="ml-2 text-lg font-semibold text-yellow-300">
-                                        20% OFF
-                                    </span>
-                                </div>
+                                    <h2 className="text-xl font-semibold">{room.name}</h2>
+                                    <p className="text-gray-200 text-sm mt-1">
+                                        {room.description.substring(0, 80)}...
+                                    </p>
 
-                                {/* Amenities */}
-                                <div className="flex flex-wrap gap-3 mt-4 text-gray-200">
-                                    {room.amenities.includes("Air Conditioning") && (
-                                        <div className="flex items-center">
+                                    {/* Price with discount */}
+                                    <div className="flex items-center mt-2">
+                                        <span className="text-lg font-bold text-gray-200">
+                                            ${room.price}/night
+                                        </span>
+                                        <span className="ml-2 text-lg font-semibold text-gray-400 line-through">
+                                            $35000
+                                        </span>
+                                        <span className="ml-2 text-lg font-semibold text-yellow-300">
+                                            20% OFF
+                                        </span>
+                                    </div>
+
+                                    {/* Amenities */}
+                                    <div className="flex flex-wrap gap-3 mt-4 text-gray-200">
+                                        {room.amenities.includes("Air Conditioning") ? (
+                                            <div className="flex items-center">
+                                                <FaBed className="mr-2" />
+                                                <span>Comfortable Beds</span>
+                                            </div>
+                                        ) : <div className="flex items-center">
                                             <FaBed className="mr-2" />
                                             <span>Comfortable Beds</span>
-                                        </div>
-                                    )}
-                                    {room.amenities.includes("High-speed Wi-Fi") && (
-                                        <div className="flex items-center">
-                                            <FaWifi className="mr-2" />
-                                            <span>High-speed Wi-Fi</span>
-                                        </div>
-                                    )}
-                                    {room.amenities.includes("Complimentary Breakfast") && (
-                                        <div className="flex items-center">
-                                            <FaUtensils className="mr-2" />
-                                            <span>Breakfast Included</span>
-                                        </div>
-                                    )}
-                                    {room.amenities.includes("Luxurious bathtub") && (
-                                        <div className="flex items-center">
-                                            <MdOutlineBathtub className="mr-2" />
-                                            <span>Bathtub</span>
-                                        </div>
-                                    )}
-                                    {room.policies.includes("No Smoking Allowed") && (
-                                        <div className="flex items-center">
-                                            <MdOutlineSmokingRooms className="mr-2" />
-                                            <span>No Smoking</span>
-                                        </div>
-                                    )}
-                                </div>
+                                        </div>}
+                                        {room.amenities.includes("High-speed Wi-Fi") && (
+                                            <div className="flex items-center">
+                                                <FaWifi className="mr-2" />
+                                                <span>High-speed Wi-Fi</span>
+                                            </div>
+                                        )}
+                                        {room.amenities.includes("Complimentary Breakfast") && (
+                                            <div className="flex items-center">
+                                                <FaUtensils className="mr-2" />
+                                                <span>Breakfast Included</span>
+                                            </div>
+                                        )}
+                                        {room.amenities.includes("Luxurious bathtub") && (
+                                            <div className="flex items-center">
+                                                <MdOutlineBathtub className="mr-2" />
+                                                <span>Bathtub</span>
+                                            </div>
+                                        )}
+                                        {room.policies.includes("No Smoking Allowed") && (
+                                            <div className="flex items-center">
+                                                <MdOutlineSmokingRooms className="mr-2" />
+                                                <span>No Smoking</span>
+                                            </div>
+                                        )}
+                                    </div>
 
+                                </div>
                                 {/* Booking Button */}
-                                <button className="w-full mt-6 py-2 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600">
-                                    Book Now
-                                </button>
+                                <div className="">
+                                    <button className="w-full mt-6 py-2 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600">
+                                        Book Now
+                                    </button>
+                                </div>
                             </div>
                         </motion.div>
                     ))}
