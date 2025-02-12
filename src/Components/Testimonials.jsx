@@ -13,10 +13,7 @@ const Testimonials = () => {
         axios
             .get(`${import.meta.env.VITE_API_PREFIX}/timestamp-review`)
             .then((res) => {
-                const allReviews = res.data;
-                setData(allReviews);
-                console.log(allReviews)
-
+                setData(res.data);
             })
             .catch((err) => console.error(err));
     }, []);
@@ -27,14 +24,14 @@ const Testimonials = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         pauseOnHover: true,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                     infinite: true,
                     dots: true
                 }
@@ -43,48 +40,53 @@ const Testimonials = () => {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 2,
-                    initialSlide: 2
+                    slidesToScroll: 1,
+                    initialSlide: 1
                 }
             },
-
         ]
     };
 
     return (
-        <div className="w-full bg-gradient-to-t from-indigo-300 to-indigo-200">
+        <div className="w-full bg-gradient-to-t from-indigo-400 to-indigo-200 py-16">
             <div className="w-11/12 mx-auto">
                 {/* Title */}
-                <HeadingTitle one={"Voices of Trust"} two={"Discover what our guests have to say about their experiences. Their words reflect the trust and satisfaction we've earned. Join them in experiencing comfort and excellence."}></HeadingTitle>
+                <HeadingTitle
+                    one={"Voices of Trust"}
+                    two={"Discover what our guests have to say about their experiences. Their words reflect the trust and satisfaction we've earned. Join them in experiencing comfort and excellence."}
+                />
 
                 {/* Testimonials Section */}
-
                 <div className="slider-container mx-6">
                     <Slider {...settings}>
                         {
-                            data.map((item, idx) =>
-                                <div key={idx} className="">
-                                    <div className="mx-2 bg-transparent border border-indigo-700 p-4 flex justify-center items-center flex-col rounded-xl h-[300px] overflow-auto">
-                                        <img src={item?.user?.photoURL} referrerPolicy="no-referrer" alt="" className="w-14 h-14 rounded-full border p-1" />
-                                        <div className="flex-1 text-center">
-                                            <h1 className="text-lg md:text-xl font-semibold font-font1 text-gray-700">{item?.user?.displayName}</h1>
-                                            <p className="text-center text-sm">{item?.comment}</p>
-                                            <Rating className="py-2"
+                            data.map((item, idx) => (
+                                <div key={idx} className="p-4">
+                                    <div className="bg-white border border-indigo-200 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+                                        <img
+                                            src={item?.user?.photoURL}
+                                            referrerPolicy="no-referrer"
+                                            alt=""
+                                            className="w-16 h-16 rounded-full border-2 border-indigo-500 p-1 mx-auto"
+                                        />
+                                        <div className="text-center mt-4">
+                                            <h1 className="text-xl font-semibold text-gray-800">{item?.user?.displayName}</h1>
+                                            <p className="text-gray-600 italic text-sm">{item?.comment.slice(0, 100)}...</p>
+                                            <Rating
+                                                className="py-2"
                                                 initialRating={item?.rating || 0}
                                                 emptySymbol={<FaStar className="text-gray-300 text-2xl" />}
                                                 fullSymbol={<FaStar className="text-yellow-500 text-2xl" />}
                                                 readonly
                                             />
-                                            <p className="">{item?.reviewTime}</p>
+                                            <p className="text-xs text-gray-500">{item?.reviewTime}</p>
                                         </div>
-
                                     </div>
                                 </div>
-                            )
+                            ))
                         }
                     </Slider>
                 </div>
-
             </div>
         </div>
     );

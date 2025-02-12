@@ -4,6 +4,7 @@ import { MdOutlineBathtub, MdOutlineSmokingRooms } from "react-icons/md";
 import { motion } from "framer-motion";
 import axios from "axios";
 import HeadingTitle from "../Utils/HeadingTitle";
+import { Link } from "react-router-dom";
 
 const SpecialOffers = () => {
     const [rooms, setRooms] = useState([]);
@@ -107,11 +108,12 @@ const SpecialOffers = () => {
 
                                 </div>
                                 {/* Booking Button */}
-                                <div className="">
-                                    <button className="w-full mt-6 py-2 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600">
+                                <Link to={"/rooms"} className="">
+                                    {/* <button className="w-full mt-6 py-2 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600">
                                         Book Now
-                                    </button>
-                                </div>
+                                    </button> */}
+                                    <img className="h-14 mt-6 mx-auto" src="https://i.ibb.co/zHrwTjXw/13818834-5364070d-removebg-preview.png" alt="" />
+                                </Link>
                             </div>
                         </motion.div>
                     ))}
