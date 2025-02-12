@@ -146,9 +146,9 @@ const Rooms = () => {
                     <div className="w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-10 gap-5 items-center">
                         {filteredRooms?.map(room => <RoomCard key={room._id} room={room}></RoomCard>)}
                         {
-                            filteredRooms?.length === 0 && <p className="text-red-500 text-xl font-semibold text-center py-20 px-4 col-span-3">
-                                No room founds!
-                            </p>
+                            filteredRooms?.length === 0 && <div className="w-full  col-span-3 flex justify-center ">
+                                <img className="w-full " src="https://i.ibb.co/sd8xQfp4/original-92212c04a044acd88c69bedc56b3dda2.webp" alt="" />
+                            </div>
                         }
                     </div>
                 </div>
